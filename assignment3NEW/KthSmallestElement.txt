@@ -1,0 +1,1 @@
+The 3th smallest element in the list is: 263.665

@@ -1,0 +1,25 @@
+a) Using the new operator write the appropriate statement to create a dynamic array of n student instances. 
+    Assume n is an integer already defined.
+
+b) What is the return value of the new operator, in the event the computer can not allocate the requested memory. 
+    Write a segment of code to check if the new actually succeeded.
+
+c) Dynamic memory means more responsibility for the programmer. 
+    Write the appropriate statement to delete the dynamically allocated array you created in part a) of this question.
+
+Place your solution in solutions.txt.
+
+struct student
+	{
+		char name[128];
+		int age;
+		int gender;
+		int courseno;
+	};
+
+student * parta = new student[n];
+
+if(parta == NULL)
+    exit(1);
+
+delete [] parta;

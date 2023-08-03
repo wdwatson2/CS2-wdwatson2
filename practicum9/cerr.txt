@@ -1,0 +1,3 @@
+This 1st line written to file. cerr
+This 2nd line written to file
+This 3rd line written to file
