@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1675191065 source:/home/sherine/Code/ClockDemo/main.cpp
+	<iostream>
+	"ClockType.h"
+
+1675269203 source:/home/sherine/Code/ClockDemo/ClockType.cpp
+	"ClockType.h"
+	<iostream>
+
+1675269572 /home/sherine/Code/ClockDemo/ClockType.h
+	<iostream>
+

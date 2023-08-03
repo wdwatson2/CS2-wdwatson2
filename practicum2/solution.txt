@@ -1,0 +1,88 @@
+1.
+    void swap(int* d, int* c)
+    {
+        int temp;
+        temp = *d;
+        *d = *c;
+        *c = temp;
+    }
+
+
+    void findsmallest(int* a, int* b, int* c)
+    {
+        if(*b < *a)
+        {
+            swap(b,a);
+        }
+        if(*c < *a)
+        {
+            swap(c,a);
+        }
+        if(*c < *b)
+        {
+            swap(c,b);
+        }
+    }
+
+    This code is straight from part1 of practicum 1. Not sure why we had to copy and paste it here.
+
+
+2.
+    int noname(const char* p)
+    {
+        char* r = (char*) p;
+        while (*r != '\0')
+            r++;
+        return r - p;
+    }
+
+    Function noname takes in a char pointer and is unable to modify it. it makes a copy of p but the 
+    paranthesis are a bit confusing. Then, while the char that r is pointing at is not a '\0' which
+    is the last char of a cstring, it will increment r which will then make r point at the next char. 
+    once a '\0' is reached, the function returns the number of characters that it read or the length 
+    of the string pointed to by p.
+
+3. 
+    void reverse(char* src)
+    {
+
+    int length = strlen(src);
+    for(int i = 0; i < length+1; i++){
+        cout << *((src + length) - i);
+    }
+    cout << endl;
+
+    }
+
+4. 
+    char* strStr(const char *s1, const char *s2){     //renamed strstr to strStr because strstr already existed
+
+        char* location = NULL;
+        int counter = 0;
+
+        while(*s2 != '\0'){      //while the current char is not the end char
+
+            if(*s1 == *s2){ 
+
+                if(counter == 0){   //beginning of a possible match
+                    location = (char*) s2;  //set location to the beginning
+                }
+
+                counter++; //increment counter to know what char s1Copy is pointing too.
+                s1++;    //increment both char* to point to their next char
+                s2++;
+
+                if(*s1 == '\0')
+                    return location; //full match so return the location of where s1 starts
+
+            }
+            else{
+                s2++;   //increment s2 to look at the next char
+                s1-=counter;   //make s1Copy reset to pointing at the beginning
+                counter = 0;   //reseting counter
+                location = NULL;  //reseting location
+            }
+        }
+
+        return location;  //Null at this point, string was not found
+    }
