@@ -1,5 +1,5 @@
 # compiler name
-CXX = clang++-12
+CXX = g++
 # c++ compiler flags
 # -g : adds debugging information to the executable file
 # -Wall : turns on most, but not  all, compiler warnings

@@ -143,6 +143,6 @@ void towersIter(int n)
 
 int main()
 {
-    towersIter(20);
+    towersIter(7);
     return 0;
 }
